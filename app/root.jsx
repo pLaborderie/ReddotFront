@@ -26,14 +26,10 @@ import {
           <Links />
         </head>
         <body>
-            <Navbar />
-          <h1 className="text-3xl font-bold underline">
-            Welcome to Reddot!
-          </h1>
-          <a href="/">Home</a>
-          &nbsp;
-          <a href="/posts/new">Create a post</a>
-          <Outlet />
+          <Navbar />
+          <div className="mx-10">
+            <Outlet />
+          </div>
   
           <Scripts />
           <LiveReload />
