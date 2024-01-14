@@ -1,5 +1,5 @@
 import {
-    Form,
+    Form, redirect,
 } from "@remix-run/react";
 
 export const action = async ({ request }) => {
@@ -19,8 +19,7 @@ export const action = async ({ request }) => {
         body: JSON.stringify(newPost),
     });
     const result = await response.json();
-    console.log(result);
-    return result;
+    throw redirect(`/posts/${result.id}`);
 }
 
 export default function NewPost() {
