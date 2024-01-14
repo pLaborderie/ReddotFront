@@ -24,7 +24,7 @@ export const action = async ({ request }) => {
 
 export default function NewPost() {
     return (
-        <Form method="post" className="container mx-auto">
+        <Form method="post">
             <h2>Create post</h2>
             <label htmlFor="author" className="block text-sm font-medium leading-6 text-gray-900">
                 Author

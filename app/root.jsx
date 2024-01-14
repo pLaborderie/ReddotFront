@@ -27,7 +27,7 @@ import {
         </head>
         <body>
           <Navbar />
-          <div className="mx-10">
+          <div className="container mx-auto">
             <Outlet />
           </div>
   
