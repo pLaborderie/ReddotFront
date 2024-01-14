@@ -5,6 +5,14 @@ import {
     Outlet,
     Scripts,
   } from "@remix-run/react";
+
+  import Navbar from './components/Navbar';
+
+  import stylesheet from "./tailwind.css";
+
+  export const links = () => [
+    { rel: 'stylesheet', href: stylesheet }
+  ];
   
   export default function App() {
     return (
@@ -18,7 +26,10 @@ import {
           <Links />
         </head>
         <body>
-          <h1>Welcome to Reddot!</h1>
+            <Navbar />
+          <h1 className="text-3xl font-bold underline">
+            Welcome to Reddot!
+          </h1>
           <a href="/">Home</a>
           &nbsp;
           <a href="/posts/new">Create a post</a>
