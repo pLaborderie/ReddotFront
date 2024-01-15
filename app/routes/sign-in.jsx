@@ -2,7 +2,7 @@ import {
     Form, useNavigate, useOutletContext,
 } from "@remix-run/react";
 
-export default function Login() {
+export default function SignIn() {
     const { supabase } = useOutletContext();
     const navigate = useNavigate();
     async function signIn(e) {

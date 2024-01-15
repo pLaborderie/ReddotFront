@@ -65,7 +65,7 @@ export default function App() {
         <Links />
       </head>
       <body className="min-h-full">
-        <Navbar />
+        <Navbar session={session} supabase={supabase} />
         <div className="container mx-auto">
           <Outlet context={{ supabase }} />
         </div>
