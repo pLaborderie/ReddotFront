@@ -1,11 +1,10 @@
 import {
-    Form, useNavigate, useOutletContext, useSubmit,
+    Form, useNavigate, useOutletContext,
 } from "@remix-run/react";
 
 export default function Login() {
     const { supabase } = useOutletContext();
     const navigate = useNavigate();
-    const submit = useSubmit();
     async function signIn(e) {
         e.preventDefault();
         const email = e.target.email.value;
@@ -14,7 +13,7 @@ export default function Login() {
             email,
             password,
         };
-        const { data, error } = await supabase.auth.signInWithPassword(user);
+        const { error } = await supabase.auth.signInWithPassword(user);
         if (error) {
             console.error(error);
         } else {
